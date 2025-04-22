@@ -1,0 +1,60 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[R]{[-doc.title-]}
+\fancyhead[L]{COSPAR Panel on Radiation Belt Environment Modeling}
+\fancyfoot{}
+\fancyfoot[R]{\thepage}
+
+\usepackage{fontspec}
+\setmainfont{Arial}
+
+\usepackage{hyperref}
+\usepackage{datetime}
+\usepackage{graphicx}
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+\usepackage{authblk}
+
+[-IMPORTS-]
+
+% colors for hyperlinks
+\hypersetup{colorlinks=true, allcolors=blue}
+
+\title{[-doc.title-]}
+
+[# for author in doc.authors #]
+[#- if author.affiliations -#]
+\author[[- author.affiliations | join(", ", "index") -]]{[- author.name -]}
+[# else #]
+\author{[- author.name -]}
+[# endif #]
+[# endfor #]
+
+[# for affiliation in doc.affiliations #]
+\affil[[-affiliation.index-]]{[- affiliation.name -]}
+[# endfor #]
+
+\newdate{articleDate}{[-doc.date.day-]}{[-doc.date.month-]}{[-doc.date.year-]}
+\date{\displaydate{articleDate}}
+
+\begin{document}
+\maketitle
+
+[# if parts.abstract #]
+\begin{abstract}
+	[-parts.abstract-]
+\end{abstract}
+[# endif #]
+
+[-CONTENT-]
+
+[# if doc.bibliography #]
+\bibliography{[- doc.bibliography | join(", ") -]}
+[# endif #]
+
+\end{document}

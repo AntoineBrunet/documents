@@ -1,0 +1,36 @@
+jtex: v1
+title: PRBEM Standard
+description: A LaTeX template for PRBEM standard documents
+version: 1.0.0
+license: CC-BY-4.0
+thumbnail: thumbnail.gif
+authors:
+  - name: Antoine Brunet
+    affiliation: ONERA
+parts:
+  - id: abstract
+    description: Document abstract
+tags:
+  - standard
+  - report
+  - onepage
+doc:
+  - id: title
+    required: true
+  - id: authors
+    required: true
+  - id: affiliations
+    required: true
+  - id: date
+  - id: bibliography
+files:
+  - template.tex
+packages:
+  - geometry
+  - fancyhdr
+  - authblk
+  - fontspec
+  - datetime
+  - graphicx
+  - hyperref
+  - natbib
