@@ -36,6 +36,13 @@ jobs:
           node-version: 18.x
       - name: Install MyST Markdown
         run: npm install -g mystmd
+      - name: Install texlive
+        uses: zauguin/install-texlive@v4
+        with: 
+          packages: >
+            scheme-basic latexmk xetex bibtex fontspec datetime fmtcount xkeyval preprint framed
+      - name: Build PDF Assets
+        run: myst build --pdf
       - name: Build HTML Assets
         run: myst build --html
       - name: Upload artifact

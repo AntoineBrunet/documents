@@ -13,6 +13,8 @@ project:
       severity: ignore
 site:
   template: book-theme
+  options:
+    logo_text: PRBEM Documents
   # options:
   #   favicon: favicon.ico
   #   logo: site_logo.png

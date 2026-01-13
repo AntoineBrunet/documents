@@ -25,9 +25,10 @@ authors:
 exports:
   - format: pdf
     template: ./.template
-    output: data_analysis_procedure.pdf
+    output: exports/PRBEM_Data_Analysis_Procedure.pdf
+    id: dap-pdf-export 
 downloads:
-  - file: ./data_analysis_procedure.pdf
+  - id: dap-pdf-export
     title: PDF Version
 ---
 
@@ -626,9 +627,7 @@ difficulties come from the introduction of electric field for which there
 are no good models in existence. In this context data must be considered as
 it.
 
-# Annex A1 : Trapped particle motion and their associated parameters
-
-## Trapped particle motion in a static dipole field
+# Annex A : Trapped particle motion and their associated parameters
 
 TODO
 
