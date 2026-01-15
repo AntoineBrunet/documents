@@ -23,6 +23,7 @@ doc:
     required: true
   - id: date
   - id: bibliography
+  - id: issue
 files:
   - template.tex
 packages:

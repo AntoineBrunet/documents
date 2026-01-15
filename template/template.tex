@@ -14,7 +14,7 @@
 \setmainfont{Liberation Sans}
 
 \usepackage{hyperref}
-\usepackage{datetime}
+\usepackage[nodayofweek]{datetime}
 \usepackage{graphicx}
 \usepackage{natbib}
 \bibliographystyle{abbrvnat}
@@ -40,11 +40,14 @@
 [# endfor #]
 
 \newdate{articleDate}{[-doc.date.day-]}{[-doc.date.month-]}{[-doc.date.year-]}
+[# if doc.issue #]
+\date{Version [-doc.issue.number-] - \displaydate{articleDate}}
+[# else #]
 \date{\displaydate{articleDate}}
+[# endif #]
 
 \begin{document}
 \maketitle
-
 [# if parts.abstract #]
 \begin{abstract}
 	[-parts.abstract-]

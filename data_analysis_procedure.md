@@ -1,5 +1,7 @@
 ---
 title: Data Analysis Procedure
+issue: 1.2
+date: 2006-03-22
 authors:
   - name: S. Bourdarie
     affiliations:
@@ -24,12 +26,12 @@ authors:
       - U. Of Surrey, UK
 exports:
   - format: pdf
-    template: ./.template
+    template: ./template
     output: exports/PRBEM_Data_Analysis_Procedure.pdf
     id: dap-pdf-export 
 downloads:
   - id: dap-pdf-export
-    title: PDF Version
+    title: PDF version
 ---
 
 # Introduction
