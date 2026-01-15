@@ -629,5 +629,137 @@ it.
 
 # Annex A : Trapped particle motion and their associated parameters
 
-TODO
+## Trapped particle motion in a static dipole field
 
+In a static dipole magnetic field, particles with charge q are subject to the
+Lorentz force $F$:
+```{math}
+:label: lorentz
+F = q (v \times B)
+```
+where $v$ is the particle velocity and $B$ the local magnetic field vector. If
+the particles are not too energetic, their motion can be divided into three
+different elementary periodic motions (combined together).
+
+The first one is the gyration around the field line. The radius $R$ of the
+particle trajectory, called the Larmor radius, is related to the local magnetic
+field value $B$ by {math}`R = \frac{p_\perp^2}{qB}`, $p_\perp$ is the component
+of $p$ perpendicular to the magnetic field vector. This motion is periodic with
+a frequency $\Omega = qB/m$ ($m$ is the relativistic mass of the particle, the order of
+magnitude of the period in the Earth vicinity is a millisecond). In fact, during this circular motion particles are
+interacting with different magnetic field strength. Then if the gradients of the magnetic field
+are very strong, $R$ cannot be assumed as a constant for very energetic particles and their
+motion is no more periodic. As this motion is in general periodic, an adiabatic invariant can
+be defined:
+```math 
+J_1 = \frac{p_\perp^2}{2qB}
+```
+which is related to the well known relativistic magnetic moment.
+
+The second periodic motion is the bounce along the field line, with back and
+forth motion between two mirror points where the magnetic field value is
+$B=B_m$. Because the first adiabatic invariant is kept constant along the
+particle motion, the equatorial pitch angle {math}`\alpha_{eq}` (the angle
+between the magnetic field vector and the particle velocity $v=\frac{p}{m}$)
+can be defined such as {math}`\sin^2(\alpha_{eq}) = B_{eq}/B_m`, where $B_{eq}$
+is the magnetic field strength at the magnetic equator. As this motion is also
+periodic, the corresponding adiabatic invariant can be defined:
+```math 
+J_2 = \frac{1}{2\pi} \oint p_\parallel ds = \frac{1}{2\pi} \oint p\sqrt{1-B/B_m} ds
+```
+The time period for the bounce motion is on the order of 1s. 
+
+The third periodic motion is a drift around the Earth. The particle drifts from one field line to
+the other, conserving $J_1$ and $J_2$ constant. Because this motion can be assumed to be periodic an
+adiabatic invariant can be defined:
+```math
+J_3 = \iint B ds = \oint A dl
+```
+where $A$ is the potential vector of the magnetic field. The time period for the drift motion is
+tens of minutes. 
+
+Though the three motions are periodic, the resulting combined motion cannot be
+exactly periodic as the particle never comes back rigorously to its initial
+position (it is only the case if there is a resonance between the 3 periods:
+$\tau_d = m\tau_r= n\tau_g$ where $m$ and $n$ are integer). This combined
+motion is called quasi-periodic as the particle comes back as nearest as
+possible from its initial location after a large number of drift periods.
+
+As a summary if a particle is trapped in the Earth magnetic field then three adiabatic
+invariants can be associated: $J_1$, $J_2$ and $J_3$.
+
+Now, because we first assume here a static magnetic field we can deduce that
+the particle energy is kept constant all along its motion: equation
+{eq}`lorentz` when scalarized by $v$ leads to:
+```math
+v\cdot F = v\cdot\frac{dp}{dt} = dE = 0
+```
+
+Then because the energy is conserved we can deduce:
+- from $J_1 = cste$, then $B_m = cste$ along the particle drift
+- from $J_2 = cste$, then $I = \oint \sqrt{1-B/B_m} ds = cste$ ($I$ is the
+integral invariant) 
+- from $J_3 = cste$, it is possible to define the Roederer {math}`L*` parameter
+such as {math}`J_3= BoRe^2 / L*`, where $Re$ the Earth radius and $Bo$ the
+magnetic field dipole value at the earth surface at the equator.
+
+To conclude, in a dipole field trapped particle motion is fully defined with
+the following parameters: $B_m = cste$, $I = cste$, {math}`L* = cste` and
+$E=cste$. The first three parameters are all three directly related to the
+magnetic field and they define a surface (a drift shell) along which particles
+with different energies have their trajectory. It is only the duration to make
+a complete drift around the Earth which is directly related to the particle
+energy. 
+
+## Trapped particle motion in a static non dipole field
+
+Because the picture is one step further more complicated we have now to verify
+which hypothesis considered in the previous paragraph a no more realistic and
+in consequence which equations are no more valid.
+
+In fact in this case all assumptions are kept valid and the equations are still
+correct.  Nevertheless some characteristics of the trapped particle motion will
+be modified.
+
+$B_m = cste$ along the drift motion is still true. Nevertheless, if $B$ is not
+symmetric with respect to the magnetic equator (which is usually no longer a
+plane), the two mirror points are no more symmetric. Moreover, it is possible
+that there are two minima of the magnetic field strength along the field line
+(i.e. two equators). In that case, four mirror points can be found rather than
+two (a particle with given $J_1$, $J_2$ and $J_3$ is then going to bounce
+between two mirror points or the others, depending on the initial phase it has
+on the bounce motion).  $I = cste$ along the motion is still true.
+
+Because the magnetic field is non-axisymetric two different particles with the
+same energy, located on the same field line but with different pitch angles
+(i.e. same $B_eq$ but different $B_m$ and $I$) will not drift along the same
+drift shell. This effect is well known as the shell splitting.
+
+## Trapped particle motion in a slowly dynamic non dipole field
+
+Let us complicate a little bit more the global picture, by considering a
+dynamic magnetic field.  If the magnetic field slowly varies as compared to
+(all) the different periods of a trapped particle (gyration, bounce and drift)
+in a certain region of the space, then the three adiabatic invariants are
+really invariants (i.e. they are not violated): $J_1 = cste$, $J_2 = cste$,
+$J_3 = cste$.
+
+From the Lorentz force point of view, an induced electric field must be
+considered:
+```math
+F = q (E + v \times B)\text{, with }E = -\delta A/\delta t,
+```
+This means that: $dE/dt = -q v.\delta A/\delta t$.
+
+In this situation it is no more possible to ensure that the energy is conserved
+($\delta A/\delta t$ is modified during the particle gyration, bounce and drift motion). As
+a result $B_m$ and $I$ are no more constant. However, $J_1$, $J_2$ and $J_3$
+are still constant, and
+```math
+J_2 = \oint p\sqrt{1-B/B_m}ds = \oint \sqrt{2qB_mJ1} \sqrt{1-B/B_m}ds = \sqrt{2qJ_1}\oint \sqrt{B_m - B} ds
+```
+as $J_1$ is constant. It means that the integral:
+```math
+K = \oint \sqrt{B_m - B} ds,
+```
+not far from the Kaufmann parameter, is constant. 
