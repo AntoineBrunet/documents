@@ -2,12 +2,9 @@
 version: 1
 project:
   id: 1edcd483-ccf0-4cfe-9331-59f4145a1504
-  # title:
-  # description:
-  # keywords: []
-  # authors: []
-  # github:
-  # To autogenerate a Table of Contents, run "myst init --write-toc"
+  toc:
+    - file: index.md
+    - file: data_analysis_procedure.md
   error_rules:
     - rule : valid-page-frontmatter
       severity: ignore
